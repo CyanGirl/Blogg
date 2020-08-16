@@ -1,0 +1,52 @@
+.postDetail {
+  background-color: rgb(254, 254, 255);
+  margin-top: 55px;
+  padding: 10px;
+  height: 85vh;
+  width: 100vw;
+}
+.content {
+  background-color: rgb(164, 208, 245);
+  margin-top: 10vh;
+  padding: 15px;
+  width: 85vw;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 2px 3px 5px 3px rgb(30, 30, 65);
+}
+.opac {
+  opacity: 0.8;
+  margin-left: 20vw;
+  font-style: italic;
+}
+#postTitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.fa-trash-alt {
+  position: absolute;
+  right: 5vw;
+  top: 3vh;
+  font-size: 22px;
+  color: white;
+}
+.fa-edit {
+  color: white;
+  position: absolute;
+  right: 9vw;
+  top: 3vh;
+  font-size: 22px;
+}
+.ok {
+  visibility: visible;
+}
+.notok {
+  visibility: hidden;
+}
+@media (max-width: 720px) {
+  .fa-edit {
+    position: absolute;
+    right: 14vw;
+    top: 3vh;
+  }
+}

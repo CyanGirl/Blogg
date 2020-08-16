@@ -18,8 +18,9 @@ router.post("/new", (req, res) => {
   //retrieving the data from client
   const title = req.body.title;
   const article = req.body.article;
-  const date = Date.parse(req.body.date);
+  const date = new Date(req.body.date);
   const author = req.body.author;
+  const open = 0;
 
   //creating nw blog post in following schema
   const newBlog = new Blogs({
@@ -27,6 +28,7 @@ router.post("/new", (req, res) => {
     article,
     date,
     author,
+    open,
   });
 
   //adding it to DB and save it
@@ -38,10 +40,29 @@ router.post("/new", (req, res) => {
     .catch((err) => res.status(400).json("Error!"));
 });
 
+//for updating a blog
+router.post("/update/:id", (req, res) => {
+  Blogs.findById(req.params.id)
+    .then((post) => {
+      post.title = req.body.title;
+      post.article = req.body.article;
+      post.date = new Date(req.body.date);
+      post.author = req.body.author;
+      post.open = Number(req.body.open);
+
+      post
+        .save()
+        .then(() => res.json("Blog updated!"))
+        .catch((err) => res.status(400).json("Error"));
+    })
+
+    .catch((err) => res.status(400).json("Error"));
+});
+
 //for deleting we only need th ID from the REQUEST URL
 router.delete("/:id", (req, res) => {
-  Exercise.findByIdAndDelete(req.params.id)
-    .then((exercise) => res.json("Exercise Deleted"))
+  Blogs.findByIdAndDelete(req.params.id)
+    .then((post) => res.json("Blog Deleted"))
     .catch((err) => res.status(400).json("Error"));
 });
 

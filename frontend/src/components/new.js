@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./new.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const NewPost = () => {
   const [title, setTitle] = useState("");
@@ -26,9 +27,9 @@ const NewPost = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    var date = "22-10-2020";
+    var date = Date.now();
 
-    if (blog.length < 5 && title.length < 2) {
+    if (blog.length < 5 || title.length < 2) {
       alert("Please fill in the details!");
     } else {
       const newBlog = {
@@ -50,21 +51,33 @@ const NewPost = () => {
   const handleClear = (e) => {
     e.preventDefault();
     var res = prompt("Please type Y to continue clearing your blog!");
-    if (res == "y" || res == "Y") {
+    if (res === "y" || res === "Y") {
       setBlog("");
     }
   };
 
   return (
-    <div>
+    <div className="middle">
       <br />
-      <h3>Create your story!</h3>
+      <Link to="/">
+        <i className="fas fa-home"></i>
+      </Link>
+      <div>
+        <div className="head absolute">
+          <h2>Blogg</h2>
+        </div>
+      </div>
+      <div>
+        <br />
+        <br />
+        <br />
+        <h3 id="newhead">Create your story!</h3>
+      </div>
+      <br />
       <form onSubmit={handleSubmit}>
         <br />
-        <div>
-          <label for="title">
-            Title &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
-          </label>
+        <div id="titleinps">
+          <i className="fas fa-heading" aria-hidden="true"></i>
           <input
             type="text"
             id="title"
@@ -72,10 +85,6 @@ const NewPost = () => {
             onChange={handleTitle}
             required
           ></input>
-          <br />
-
-          <label for="author">Pen Name &nbsp;</label>
-          <input type="text" id="author" onChange={handleAuth}></input>
           <br />
         </div>
         <div className="container">
@@ -88,16 +97,24 @@ const NewPost = () => {
               required
             ></textarea>
             <br />
+            <div className="pen">
+              <br />
+              <i className="fas fa-user"></i>
+              <input type="text" id="authorinp" onChange={handleAuth}></input>
+              <br />
+            </div>
             <div>
-              <button className="btn btn-primary" onClick={handleSubmit}>
+              <br />
+              <button className="submit" onClick={handleSubmit}>
                 Submit
               </button>
-              <button className="btn btn-danger" onClick={handleClear}>
+              <button className="clear" onClick={handleClear}>
                 Clear
               </button>
             </div>
           </div>
         </div>
+        <br />
       </form>
     </div>
   );

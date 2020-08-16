@@ -13,6 +13,7 @@ body {
 .comment {
   width: 100%;
   height: auto;
+  opacity: 0.8;
 }
 
 .textinput {
@@ -22,13 +23,89 @@ body {
   outline: none;
   resize: none;
   border: 1px solid grey;
-}
-button {
-  margin-top: 2vh;
-  border-width: 0px;
-  outline: none;
-  border-radius: 30%;
-  width: 10vw;
+  font-size: 19px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   padding: 5px;
-  margin: 3px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 4px rgb(11, 20, 41);
+}
+.submit,
+.clear {
+  border-width: 1px;
+  outline: none;
+  border-radius: 15px;
+  width: 15vw;
+  padding: 5px;
+  background-color: rgb(164, 208, 245);
+  color: black;
+  margin: 5px;
+  font-weight: bold;
+}
+.middle {
+  text-align: center;
+  opacity: 0;
+  width: 80vw;
+  margin: auto;
+  animation-name: popin;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+@keyframes popin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#newhead {
+  color: white;
+}
+form {
+  background-color: rgb(164, 208, 245);
+}
+#title,
+#authorinp {
+  outline: none;
+  margin-left: 2vw;
+  opacity: 0.8;
+  padding: 5px;
+  border-radius: 8px;
+}
+.fa-home {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+.fa-home:hover {
+  color: rgb(151, 223, 233);
+  font-size: 200%;
+}
+button:focus {
+  outline: none;
+}
+.submit {
+  background: linear-gradient(90deg, rgb(62, 81, 121), rgb(135, 135, 214));
+  color: aliceblue;
+}
+.submit:hover {
+  background: linear-gradient(90deg, rgb(135, 135, 214), rgb(62, 81, 121));
+}
+.clear:hover {
+  background: linear-gradient(90deg, rgb(165, 35, 35), rgb(163, 90, 90));
+  color: aliceblue;
+}
+@media (max-width: 750px) {
+  .submit,
+  .clear {
+    width: 25vw;
+  }
+  .middle {
+    width: 95vw;
+    margin: auto;
+  }
 }

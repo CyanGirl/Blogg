@@ -1,0 +1,49 @@
+#login {
+  background-color: #ffffff;
+  height: 90vh;
+  text-align: center;
+}
+#loginback {
+  margin-top: 10vh;
+}
+#loginform {
+  width: 70vw;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 2px 3px 4px 3px rgb(58, 48, 50);
+}
+.textlog {
+  margin-left: 5vw;
+  opacity: 0.8;
+}
+.textlog:focus {
+  outline: none;
+  opacity: 1;
+}
+label {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.loginbutton {
+  margin-top: 10px;
+  background: linear-gradient(90deg, rgb(62, 81, 121), rgb(135, 135, 214));
+  color: aliceblue;
+  border-width: 0.5px;
+  width: 10vw;
+  border-radius: 5px;
+}
+.loginbutton:hover {
+  background: linear-gradient(90deg, rgb(135, 135, 214), rgb(62, 81, 121));
+}
+@media (max-width: 720px) {
+  #loginform {
+    width: 88vw;
+  }
+  .loginbutton {
+    width: 20vw;
+  }
+  .textlog {
+    width: 60vw;
+  }
+}

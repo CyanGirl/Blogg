@@ -7,6 +7,7 @@ const BlogPage = new schema({
   article: { type: String, required: true },
   date: { type: Date, required: true },
   author: { type: String, required: true },
+  open: { type: Number, required: true },
 });
 
 //creating database in Atlas

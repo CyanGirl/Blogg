@@ -1,0 +1,25 @@
+.contact {
+  width: 80vw;
+  color: rgb(212, 206, 206);
+}
+#contactHead {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.contact p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#footer {
+  padding: 20px;
+  color: rgb(236, 163, 114);
+}
+#footer a {
+  color: rgb(236, 163, 114);
+  font-style: italic;
+}
+#contactCon {
+  box-shadow: 2px 3px 4px 5px rgb(186, 211, 243);
+  padding: 15px;
+  background-color: rgb(35, 57, 70);
+}
