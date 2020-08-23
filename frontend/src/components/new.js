@@ -83,6 +83,7 @@ const NewPost = () => {
             id="title"
             value={title}
             onChange={handleTitle}
+            placeholder="Title"
             required
           ></input>
           <br />
@@ -100,7 +101,12 @@ const NewPost = () => {
             <div className="pen">
               <br />
               <i className="fas fa-user"></i>
-              <input type="text" id="authorinp" onChange={handleAuth}></input>
+              <input
+                type="text"
+                id="authorinp"
+                placeholder="Pen name"
+                onChange={handleAuth}
+              ></input>
               <br />
             </div>
             <div>

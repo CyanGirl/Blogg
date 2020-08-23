@@ -1,9 +1,5 @@
 .postDetail {
-  background-color: rgb(254, 254, 255);
   margin-top: 55px;
-  padding: 10px;
-  height: 85vh;
-  width: 100vw;
 }
 .content {
   background-color: rgb(164, 208, 245);
@@ -13,6 +9,10 @@
   margin: auto;
   border-radius: 15px;
   box-shadow: 2px 3px 5px 3px rgb(30, 30, 65);
+}
+.white {
+  background-color: rgb(255, 254, 255);
+  padding: 15px;
 }
 .opac {
   opacity: 0.8;
@@ -43,10 +43,59 @@
 .notok {
   visibility: hidden;
 }
+
+.white button {
+  position: absolute;
+  margin-left: 20px;
+  background-color: transparent !important;
+  margin-top: 25px;
+  opacity: 0.8;
+}
+
+.comntInp {
+  width: 50vw;
+  opacity: 0.7;
+  box-shadow: 4px 4px 4px 5px rgb(139, 149, 245);
+  border: 0px;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 5vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.comntInp:focus {
+  outline: none;
+  opacity: 1;
+}
+#cmthead {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+#eachcmt {
+  max-width: 85vw;
+  padding: 10px;
+  border-radius: 7px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: 3px solid rgb(195, 238, 253);
+
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+#commentSec {
+  width: 85vw;
+  padding: 7px;
+  margin: auto;
+}
 @media (max-width: 720px) {
   .fa-edit {
     position: absolute;
     right: 14vw;
     top: 3vh;
+  }
+}
+@media (min-width: 720px) {
+  .comntInp {
+    margin-left: 15vw;
   }
 }

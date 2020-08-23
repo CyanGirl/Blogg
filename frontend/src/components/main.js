@@ -16,10 +16,11 @@ const Main = () => {
       </div>
       <div className="back">
         <br />
-        <h4 className="listHead">....stories....</h4>
+        <h4 className="listHead">....Stories....</h4>
         <Posts />
         <br />
         <br />
+        <div className="footer"></div>
       </div>
     </div>
   );

@@ -12,8 +12,8 @@ import { Contxt } from "./components/context";
 
 function App() {
   return (
-    <Router>
-      <Contxt>
+    <Contxt>
+      <Router basename="/">
         <div className="App">
           <Route path="/" exact component={Main} />
           <Route path="/new" component={NewPost} />
@@ -22,8 +22,8 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/edit" component={Edit} />
         </div>
-      </Contxt>
-    </Router>
+      </Router>
+    </Contxt>
   );
 }
 

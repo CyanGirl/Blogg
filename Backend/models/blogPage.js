@@ -8,6 +8,7 @@ const BlogPage = new schema({
   date: { type: Date, required: true },
   author: { type: String, required: true },
   open: { type: Number, required: true },
+  comment: { type: Array, required: true },
 });
 
 //creating database in Atlas

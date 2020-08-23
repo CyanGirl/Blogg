@@ -30,6 +30,7 @@ const Posts = () => {
     const date = post.date;
     const author = post.author;
     const open = Number(post.open) + 1;
+    const comment = post.comment;
 
     const updated = {
       title,
@@ -37,6 +38,7 @@ const Posts = () => {
       date,
       author,
       open,
+      comment,
     };
 
     axios
@@ -73,7 +75,8 @@ const Posts = () => {
           </Link>
           <i className="far fa-eye"></i>
           <p id="open"> {post.open} </p>
-          <i className="far fa-heart"></i>
+          <i className="far fa-comments"></i>
+          <p id="comt">{post.comment.length}</p>
           <i className="far fa-user" aria-hidden="true"></i>
           <p id="author"> {post.author} </p>
           <br />

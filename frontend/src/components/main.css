@@ -16,3 +16,13 @@
   padding: 5px;
   color: rgb(29, 46, 77);
 }
+.footer {
+  height: 20px;
+  padding: 25px;
+  background-color: rgba(39, 72, 110, 0.85);
+}
+@media (min-width: 800px) {
+  .listHead {
+    margin-left: 20vw;
+  }
+}

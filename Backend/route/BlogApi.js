@@ -21,6 +21,7 @@ router.post("/new", (req, res) => {
   const date = new Date(req.body.date);
   const author = req.body.author;
   const open = 0;
+  const comment = [];
 
   //creating nw blog post in following schema
   const newBlog = new Blogs({
@@ -29,6 +30,7 @@ router.post("/new", (req, res) => {
     date,
     author,
     open,
+    comment,
   });
 
   //adding it to DB and save it
@@ -49,7 +51,7 @@ router.post("/update/:id", (req, res) => {
       post.date = new Date(req.body.date);
       post.author = req.body.author;
       post.open = Number(req.body.open);
-
+      post.comment = req.body.comment;
       post
         .save()
         .then(() => res.json("Blog updated!"))

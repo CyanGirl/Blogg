@@ -16,6 +16,7 @@ const Edit = (props) => {
   const [article, setArticle] = useState(post.article);
   const [date, setDate] = useState(post.date);
   const [open, setOpen] = useState(post.open);
+  const [comment, setComment] = useState(post.comment);
 
   const handleAuth = (e) => {
     e.preventDefault();
@@ -44,6 +45,7 @@ const Edit = (props) => {
         date: date,
         author: author,
         open: open,
+        comment: comment,
       };
       console.log(updated);
       axios

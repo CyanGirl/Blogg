@@ -16,27 +16,29 @@ const Contact = () => {
       <br />
       <br />
       <br />
-      <h3 id="contactHead">Know Us!</h3>
-      <br />
-      <div id="contactCon">
+      <div className="fixedback">
+        <h3 id="contactHead">Know Us!</h3>
         <br />
-        <p id="first">
-          This world is so huge. Isn't It? Every second somewhere something or
-          other is happening. Interesting in way of Different Perception.
-        </p>
-        <p id="second">
-          So do you have something which you want to share to the world? A
-          story? Or an Idea? Or an experience worth sharing?
-        </p>
-        <p id="third">
-          Tell us. You have our ears. Make your story heard.
-          <br /> No need to login. No need to register. <br /> Straightaway
-          write your mind out on the go.
-        </p>
-        <p id="fourth">
-          This is your Space. Make it better with your interesting stories.
-        </p>
-        <br />
+        <div id="contactCon">
+          <br />
+          <p id="first">
+            This world is so huge. Isn't It? Every second somewhere something or
+            other is happening. Interesting in way of Different Perception.
+          </p>
+          <p id="second">
+            So do you have something which you want to share to the world? A
+            story? Or an Idea? Or an experience worth sharing?
+          </p>
+          <p id="third">
+            Tell us. You have our ears. Make your story heard.
+            <br /> No need to login. No need to register. <br /> Straightaway
+            write your mind out on the go.
+          </p>
+          <p id="fourth">
+            This is your Space. Make it better with your interesting stories.
+          </p>
+          <br />
+        </div>
       </div>
       <br />
       <p id="footer">
